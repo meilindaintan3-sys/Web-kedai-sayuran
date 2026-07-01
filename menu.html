@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Menu - Kedai Sayur Buk Dewi</title>
+	<title>Kedai Sayur Buk Dewi - Segar Setiap Hari</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
@@ -14,6 +14,7 @@
 		padding-top: 60px; 
 	}
 
+	
 	.navbar{
 		background-color: #2E7D32; 
 		border: none;
@@ -55,15 +56,57 @@
 		background-color: #1B5E20;
 	}
 	
+	
+	.hero {
+		background: url('images/etalase-sayur.jpg') no-repeat center/cover; 
+		color: #fff;
+		text-align: center;
+		padding: 120px 20px;
+		position: relative;
+	}
+	.hero::after { 
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: rgba(0,0,0,0.5);
+	}
+	.hero-content {
+		position: relative;
+		z-index: 2;
+	}
+	.hero h1 {
+		font-weight: 800;
+		font-size: 48px;
+	}
+	.hero p {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.btn-pesan, .btn-selengkapnya {
+		background: #FF9800;
+		color: #fff;
+		font-weight: 800;
+		padding: 12px 30px;
+		border-radius: 50px;
+		border: none;
+		transition: 0.3s;
+		text-decoration: none;
+		display: inline-block;
+		margin: 5px;
+	}
+	.btn-pesan:hover, .btn-selengkapnya:hover {
+		background: #F57C00;
+		color: #fff;
+	}
+
 	.section-title {
 		text-align: center;
 		color: #2E7D32;
 		font-weight: 800;
-		margin: 60px 0 40px 0; /* Margin bawah dikecilin biar gak kejauhan */
+		margin: 60px 0 90px 0;
 		font-size: 32px;
 	}
 
-	/* ===== CARD PRODUK FIX LAYOUT ===== */
 	.card-produk {
 		background: #fff;
 		border-radius: 15px;
@@ -72,9 +115,7 @@
 		margin-bottom: 30px;
 		transition: 0.3s;
 		text-align: left; 
-		display: flex; /* KUNCI 1: Biar tinggi sama */
-		flex-direction: column;
-		height: 100%; /* KUNCI 2: Biar ngisi 1 kolom penuh */
+		padding-bottom: 15px;
 	}
 	.card-produk:hover {
 		transform: translateY(-5px);
@@ -87,9 +128,6 @@
 	}
 	.card-produk .card-body {
 		padding: 15px 20px;
-		display: flex; /* KUNCI 3 */
-		flex-direction: column;
-		flex-grow: 1; /* KUNCI 4: Biar body ngisi sisa ruang */
 	}
 	.card-produk h4 { 
 		font-weight: 800;
@@ -107,33 +145,22 @@
 		font-size: 14px;
 		color: #555;
 		line-height: 1.6;
+		min-height: 60px; 
 		margin-bottom: 15px;
 		text-align: justify;
-		flex-grow: 1; /* KUNCI 5: Deskripsi yang ngembang, dorong tombol ke bawah */
 	}
 	.card-produk .btn-pesan { 
-		background: #FF9800;
-		color: #fff;
-		font-weight: 800;
 		padding: 8px 20px; 
 		font-size: 14px;
 		width: 100%;
 		text-align: center;
-		border-radius: 50px;
-		text-decoration: none;
-		display: inline-block;
-		margin-top: auto; /* KUNCI 6: Tombol auto nempel bawah */
-	}
-	.card-produk .btn-pesan:hover {
-		background: #F57C00;
-		color: #fff;
 	}
 
+	
 	.footer-sayur {
 		background: #2E7D32;
 		color: white;
 		padding: 50px 0 20px 0;
-		margin-top: 40px;
 	}
 	.footer-sayur h4 {
 		font-weight: 800;
@@ -164,12 +191,13 @@
 	@media (max-width: 768px) {
 	.hero h1 { font-size: 32px; }
 	.hero { padding: 80px 20px; }
+	.card-produk .deskripsi { min-height: auto; }
 	}
 	</style>
 </head>
 <body>
 
-	<!-- NAVBAR -->
+	
 	<nav class="navbar navbar-inverse">
 	<div class="container">
 	<div class="navbar-header">
@@ -178,7 +206,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="menu.html">
 				<div class="logo-sayur">🥕</div>
 				Buk Dewi
 			</a>
@@ -187,15 +215,16 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="index.html">HOME</a></li>
                 <li class="active"><a href="menu.html">MENU</a></li>
-				<li><a href="Tentang kami.html">TENTANG</a></li> <!-- Saran: ganti jadi tentang-kami.html biar aman -->
+				<li><a href="Tentang kami.html">TENTANG</a></li>
 				<li><a href="kontak.html">KONTAK</a></li>
 			</ul>
 	</div>
 	</div>
 	</nav>
-	<!-- UDAH AKU HAPUS </div> NYASAR DARI SINI -->
 
-	<!-- PRODUK FULL + DESKRIPSI/MANFAAT -->
+	</div>
+	
+	
 	<section id="produk" style="background: #fff; padding-bottom: 60px;">
 	<div class="container">
 			<h2 class="section-title">Menu Sayuran</h2>
@@ -204,12 +233,14 @@
 				<!-- MENU 1 -->
 				<div class="col-md-4 col-sm-6">
 					<div class="card-produk">
-						<img src="Image/ikan nila.jpeg" alt="Ikan Nila Segar">
+						<img src="Image/ikan nila.jpeg" alt="Ikan Nila">
 						<div class="card-body">
 							<h4>Ikan Nila Segar </h4>
 							<div class="harga">Rp 20.000 /kg</div>
-							<p class="deskripsi">Ikan nila adalah salah satu sumber protein hewani yang terjangkau, mudah diolah, dan padat nutrisi. Rendah lemak dan kalori, sehingga membuat Anda merasa kenyang lebih lama tanpa asupan kalori berlebih</p>
-							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Ikan%20Nila" target="_blank" class="btn-pesan">Pesan via WA</a>
+							<p class="deskripsi">Ikan nila adalah salah satu sumber protein hewani yang terjangkau, 
+							 mudah diolah, dan padat nutrisi. Rendah lemak dan kalori, sehingga membuat Anda merasa
+							 kenyang lebih lama tanpa asupan kalori berlebih</p>
+							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Tomat" target="_blank" class="btn-pesan">Pesan via WA</a>
 						</div>
 					</div>
 				</div>
@@ -221,7 +252,10 @@
 						<div class="card-body">
 							<h4>Bayam Hijau Segar</h4>
 							<div class="harga">Rp 3.000 /ikat</div>
-							<p class="deskripsi">Bayam adalah sayuran superfood yang kaya akan nutrisi, vitamin, dan antioksidan. Manfaat utamanya meliputi pencegahan anemia, menjaga kesehatan jantung dan mata, mengontrol gula darah, serta mendukung sistem kekebalan tubuh</p>
+							<p class="deskripsi">Bayam adalah sayuran superfood yang kaya akan nutrisi,
+								 vitamin, dan antioksidan. Manfaat utamanya meliputi pencegahan anemia,
+								  menjaga kesehatan jantung dan mata, mengontrol gula darah, serta 
+								  mendukung sistem kekebalan tubuh</p>
 							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%202%20ikat%20Bayam" target="_blank" class="btn-pesan">Pesan via WA</a>
 						</div>
 					</div>
@@ -234,7 +268,10 @@
 						<div class="card-body">
 							<h4>Wortel Manis</h4>
 							<div class="harga">Rp 10.000 /kg</div>
-							<p class="deskripsi">Wortel kaya akan beta-karoten (vitamin A), serat, dan antioksidan. Sayuran ini sangat baik untuk mempertajam penglihatan, menjaga kesehatan jantung, mengontrol kadar gula darah, melancarkan pencernaan.</p>
+							<p class="deskripsi">Wortel kaya akan beta-karoten (vitamin A), serat, 
+							dan antioksidan. Sayuran ini sangat baik untuk mempertajam penglihatan,
+							menjaga kesehatan jantung, mengontrol kadar gula darah, melancarkan
+							pencernaan.</p>
 							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Wortel" target="_blank" class="btn-pesan">Pesan via WA</a>
 						</div>
 					</div>
@@ -247,8 +284,11 @@
 						<div class="card-body">
 							<h4>Kol Putih Segar</h4>
 							<div class="harga">Rp 8.000 </div>
-							<p class="deskripsi">Kol putih adalah sayuran rendah kalori kaya serat, vitamin C, dan vitamin K. Berbagai nutrisinya sangat baik untuk melancarkan pencernaan, mengontrol berat badan, menjaga kesehatan tulang, menurunkan kolesterol.</p>
-							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Kol" target="_blank" class="btn-pesan">Pesan via WA</a>
+							<p class="deskripsi">Kol putih adalah sayuran rendah kalori kaya serat, 
+							    vitamin C, dan vitamin K. Berbagai nutrisinya sangat baik untuk melancarkan 
+							    pencernaan, mengontrol berat badan, menjaga kesehatan tulang, menurunkan 
+							    kolesterol.</p>
+							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Kentang" target="_blank" class="btn-pesan">Pesan via WA</a>
 						</div>
 					</div>
 				</div>
@@ -260,7 +300,9 @@
 						<div class="card-body">
 							<h4>Bawang Merah </h4>
 							<div class="harga">Rp 25.000 /kg</div>
-							<p class="deskripsi">Bawang merah kaya akan antioksidan, senyawa sulfur, dan vitamin C. Mengonsumsinya secara rutin sangat baik untuk meningkatkan daya tahan tubuh, mengontrol kadar gula darah, menjaga kesehatan jantung.</p>
+							<p class="deskripsi">Bawang merah kaya akan antioksidan, senyawa sulfur, dan
+							   vitamin C. Mengonsumsinya secara rutin sangat baik untuk meningkatkan 
+							   daya tahan tubuh, mengontrol kadar gula darah, menjaga kesehatan jantung.</p>
 							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Bawang" target="_blank" class="btn-pesan">Pesan via WA</a>
 						</div>
 					</div>
@@ -269,12 +311,15 @@
 				<!-- MENU 6 -->
 				<div class="col-md-4 col-sm-6">
 					<div class="card-produk">
-						<img src="Image/cabai merah.jpeg" alt="Cabai Merah">
+						<img src="Image/cabai merah.jpeg" alt="Kol Putih">
 						<div class="card-body">
 							<h4>Cabai Merah</h4>
 							<div class="harga">Rp 40.000 /kg</div>
-							<p class="deskripsi">Cabai merah kaya akan vitamin C, vitamin A, dan senyawa capsaicin yang memberikan rasa pedas. Kandungan ini memberikan banyak khasiat, mulai dari meningkatkan sistem kekebalan tubuh, meredakan nyeri, melancarkan sirkulasi darah.</p>
-							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Cabai" target="_blank" class="btn-pesan">Pesan via WA</a>
+							<p class="deskripsi">Cabai merah kaya akan vitamin C, vitamin A, 
+								dan senyawa capsaicin yang memberikan rasa pedas. Kandungan ini 
+								memberikan banyak khasiat, mulai dari meningkatkan sistem kekebalan 
+								tubuh, meredakan nyeri, melancarkan sirkulasi darah.</p>
+							<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20pesan%201kg%20Kol" target="_blank" class="btn-pesan">Pesan via WA</a>
 						</div>
 					</div>
 				</div>
@@ -283,7 +328,9 @@
 	</div>
 	</section>
 
-	<!-- FOOTER -->
+	
+	
+	<!-- 4. KONTAK/FOOTER -->
 	<footer class="footer-sayur" id="kontak">
 	<div class="container">
 			<div class="row">
@@ -302,6 +349,7 @@
 			<p class="footer-copyright">© 2026 Kedai Sayur Buk Dewi. Segar, Murah, Amanah.</p>
 	</div>
 	</footer>
+
 
 <script src="bootstrap/js/jQuery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
