@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tentang Kami - Kedai Sayur Buk Dewi</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+	<style>
+	body{
+		background: #F5FFF0; 
+		font-family: 'Nunito', sans-serif;
+		padding-top: 60px; 
+	}
+
+	/* ===== NAVBAR ===== */
+	.navbar{
+		background-color: #2E7D32; 
+		border: none;
+		border-radius: 0;
+		margin-bottom: 0;
+		min-height: 60px;
+		position: fixed; 
+		top: 0;
+		width: 100%;
+		z-index: 9999;
+	}
+	.navbar-brand {
+		color: #fff !important;
+		font-weight: 800;
+		font-size: 22px;
+		padding: 5px 15px;
+		display: flex;
+		align-items: center;
+	}
+	.logo-sayur {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background: #FF9800; 
+		color: #fff;
+		font-size: 28px;
+		text-align: center;
+		line-height: 50px;
+		margin-right: 10px;
+		border: 2px solid #fff;
+	}
+	.navbar-inverse .navbar-nav > li > a {
+		color: #fff;
+		font-weight: 700;
+		line-height: 30px;
+	}
+	.navbar-inverse .navbar-nav > li > a:hover,
+	.navbar-inverse .navbar-nav > .active > a {
+		background-color: #1B5E20;
+	}
+
+	/* ===== TENTANG ===== */
+	#tentang {
+		background: #fff;
+		padding: 80px 0; 
+	}
+	.tentang-box {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		margin-bottom: 80px; 
+	}
+	.tentang-text h2 {
+		color: #2E7D32;
+		font-weight: 800;
+		font-size: 32px;
+		margin-bottom: 20px;
+		
+	}
+	.tentang-text p {
+		font-size: 16px;
+		color: #444;
+		line-height: 1.8;
+		text-align: justify;
+	}
+	.foto-bukdewi {
+		width: 100%;
+		max-width: 350px;
+		border-radius: 20px;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+		border: 5px solid #F5FFF0;
+	}
+	
+	.section-title {
+		text-align: center;
+		color: #2E7D32;
+		font-weight: 800;
+		margin: 0 0 40px 0;
+		font-size: 32px;
+	}
+	.box-kenapa {
+		text-align: center;
+		padding: 30px 20px;
+		background: #F5FFF0;
+		border-radius: 15px;
+		height: 100%;
+		transition: 0.3s;
+		margin-bottom: 30px;
+	}
+	.box-kenapa:hover {
+		background: #E8F5E9;
+		transform: translateY(-5px);
+	}
+	.box-kenapa .icon {
+		font-size: 45px;
+		color: #2E7D32;
+		margin-bottom: 15px;
+	}
+	.box-kenapa h4 {
+		font-weight: 800;
+		color: #2E7D32;
+	}
+
+	/* ===== FOOTER/KONTAK ===== */
+	.footer-sayur {
+		background: #2E7D32;
+		color: white;
+		padding: 50px 0 20px 0;
+	}
+	.footer-sayur h4 {
+		font-weight: 800;
+		margin-bottom: 20px;
+	}
+	.footer-sayur p, .footer-sayur li {
+		color: #C8E6C9;
+	}
+	.footer-sayur .wa-btn {
+		background: #25D366;
+		color: #fff;
+		padding: 12px 25px;
+		border-radius: 50px;
+		font-weight: 800;
+		display: inline-block;
+		text-decoration: none;
+		margin-top: 10px;
+	}
+	.footer-copyright {
+		text-align: center;
+		border-top: 1px solid #388E3C;
+		margin-top: 30px;
+		padding-top: 20px;
+		font-size: 13px;
+		color: #A5D6A7;
+	}
+
+	@media (max-width: 768px) {
+	.tentang-box { 
+		flex-direction: column; 
+		text-align: center; 
+		gap: 20px;
+	}
+	.foto-bukdewi { max-width: 280px; }
+	}
+	</style>
+</head>
+<body>
+
+	<!-- HOME PRODUK TENTANG KONTAK -->
+	<nav class="navbar navbar-inverse">
+	<div class="container">
+	<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-sayur">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">
+				<div class="logo-sayur">🥕</div>
+				 Buk Dewi
+			</a>
+	</div>
+	<div class="collapse navbar-collapse" id="nav-sayur">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li class="active"><a href="Tentang kami.html">TENTANG</a></li>
+				<li><a href="kontak.html">KONTAK</a></li>
+			</ul>
+	</div>
+	</div>
+	</nav>
+
+	<!-- ISI TENTANG -->
+	<section id="tentang">
+	<div class="container">
+		
+	<!-- KATA SAMBUTAN + FOTO BUK DEWI -->
+	<div class="tentang-box">
+				<div class="tentang-text col-md-7">
+					<h2>Kata Sambutan dari Buk Dewi</h2>
+					<p>
+					"Assalamualaikum Ibu-Ibu dan Bapak-Bapak semua. Saya Buk Dewi, pemilik Kedai Sayur ini. 
+					<br><br>
+					Kedai ini saya dirikan sejak tahun 2015, usaha kedai sayuran ini sudah mencapai 11tahun,
+           	 		dan hadir untuk menyediakan berbagai sayuran segar, sehat, dan berkualitas bagi masyarakat.
+            		Dengan dukungan dari petani lokal kedai sayuran ini terus berkembang dan menjadi 
+					pilihan pelanggan dalam memenuhi kebutuhan sayuran dan bahan makanan sehat 
+					sehari-hari.
+					<br></br>
+					Komitmen kami cuma satu: Jujur dalam timbangan, jujur dalam harga. Terima kasih sudah menjadi keluarga besar Kedai Sayur Buk Dewi."
+					</p>
+					<h5 style="font-weight:800; color:#FF9800; margin-top:20px; font-size:16px;">- Buk Dewi, Pemilik Kedai</h5>
+				</div>
+				<div class="col-md-5 text-center">
+					<img src="Image/FOTO SAYURAN.jpeg" alt="Foto Buk Dewi" class="foto-bukdewi"> 
+				</div>
+	</div>
+	
+	<!--KENAPA PILIH KAMI -->
+	<h2 class="section-title">Kenapa Harus Belanja di Buk Dewi?</h2>
+	<div class="row">
+				<div class="col-md-4">
+					<div class="box-kenapa">
+						<div class="icon">🥬</div>
+						<h4>100% Fresh Setiap Pagi</h4>
+						<p>Semua sayur dikemas jam 5 pagi. 
+							Bukan sayur simpan kulkas 3 hari. Dijamin seger krenyes.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-kenapa">
+						<div class="icon">🚚</div>
+						<h4>Gratis Ongkir & COD</h4>
+						<p>Gratis ongkir se-Kec. stabat min. belanja 50rb, 
+						Bisa bayar di tempat, jadi aman.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-kenapa">
+						<div class="icon">👩‍🌾</div>
+						<h4>Langsung dari Petani</h4>
+						<p>Harga lebih murah 20-30% karena tanpa perantara tengkulak. Petani senang, pembeli senang.</p>
+					</div>
+				</div>
+	</div>
+
+	</div>
+	</section>
+
+	
+	<!-- 4. KONTAK/FOOTER -->
+	<footer class="footer-sayur" id="kontak">
+	<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h4>Kedai Sayur Buk Dewi</h4>
+					<p>📍 Lokasi: Jl Sei Dendang Lingkungan v Gg Masjid Al-Mutaqin</p>
+					<p>🕒 Buka: Senin - Minggu, 05.00 - 22.00 WIB</p>
+					<p>📞 Telepon: 0899-0998-291</p>
+				</div>
+				<div class="col-md-6 text-center">
+					<h4>Pesan Sekarang</h4>
+					<p>Chat aja langsung ke WA Buk Dewi. Respon cepat.</p>
+					<a href="https://wa.me/628990998291?text=Halo%20Buk%20Dewi,%20mau%20pesan%20sayur" target="_blank" class="wa-btn">Chat WA Buk Dewi</a>
+				</div>
+			</div>
+			<p class="footer-copyright">© 2026 Kedai Sayur Buk Dewi. Segar, Murah, Amanah.</p>
+	</div>
+	</footer>
+
+<script src="bootstrap/js/jQuery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
